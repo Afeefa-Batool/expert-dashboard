@@ -1,12 +1,8 @@
+import Manageaddress from '@/components/Manage-address'
+import React from 'react'
 import Head from "next/head";
-import Image from "next/image";
-import { Inter } from "@next/font/google";
-import styles from "@/styles/Home.module.css";
-import Modal from "@/components/Modal";
 
-const inter = Inter({ subsets: ["latin"] });
-
-export default function Home() {
+const addresspage = () => {
   return (
     <>
       <Head>
@@ -20,22 +16,17 @@ export default function Home() {
           integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
           crossOrigin="anonymous"
         />
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap" rel="stylesheet"></link>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200;300&display=swap" rel="stylesheet"></link>
 <link
         rel="stylesheet"
         href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
         integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
         crossOrigin="anonymous"
       />
-      
       </Head>
-      <Modal />
-      
-      <script
-        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
-        crossOrigin="anonymous"
-      />
+    <Manageaddress/>
     </>
-  );
+  )
 }
+
+export default addresspage
