@@ -1,20 +1,21 @@
 import React from "react";
-import img1 from "../public/images/img1.jpg";
+import img1 from "../public/images/img3.png";
 import Image from "next/image";
 import { AiOutlineRight } from "react-icons/ai";
-const Manageaddress = () => {
+import { BiBuildings } from "react-icons/bi";
+const Createaddress = () => {
   return (
     <>
-      <div className="container-fluid">
+      <div className="container">
         <div className="row d-flex justify-content-between">
-          <div className="col-md-4">
+          <div className="col-md-3">
             <div className="card card-border">side bar</div>
           </div>
-          <div className="col-md-8">
+          <div className="col-md-9">
             {/* ===========create addres ssection============= */}
             <div className="card p-4">
               <div className="row d-flex justify-content-between">
-                <div className="col-md-6">
+                <div className="col-md-9">
                   <h4 className="create-address">Create Address</h4>
                   <p className="address-detail">
                     Your home and work addresses are used to personalize your
@@ -30,10 +31,10 @@ const Manageaddress = () => {
                 <div className="col-md-3">
                   <Image
                     src={img1}
-                    height={80}
-                    width={80}
+                    height={100}
+                    width={200}
                     alt="create account"
-                    className="rounded-circle mx-auto d-block mt-3"
+                    className="rounded-circle mx-auto d-block "
                   />
                 </div>
               </div>
@@ -45,50 +46,62 @@ const Manageaddress = () => {
               <div className="row d-flex justify-content-around">
                 <div className="col-md-12">
                   <div className="input-group">
-                    <input type="text" required />
-                    <label htmlFor="">username</label>
+                    <input type="text" required value={"abc"}/>
+                    {/* <label htmlFor="">username</label> */}
+                    <label htmlFor="">
+                      {/* <BiBuildings />
+                      <span className="Beck-Hall">Beck Hall, Cove Road Malham Yorkshire, United Kingdom (BD23 4DJ)</span> */}
+                    Address
+                    </label>
+                  </div>
+                </div>
+                <div className="row p-0">
+                  <div className="col-md-12">
+                    <div className="input-group">
+                      <input type="text" required />
+                      <label htmlFor="">Address Name</label>
+                    </div>
+                  </div>
+           
+                </div>
+                <div className="row p-0">
+                  <div className="col-md-6">
+                    <div className="input-group">
+                      <input type="text" required />
+                      <label htmlFor="">Flat & Building Number</label>
+                    </div>
+                  </div>
+                  <div className="col-md-6">
+                    <div className="input-group">
+                      <input type="text" required />
+                      <label htmlFor="">Street Address</label>
+                    </div>
                   </div>
                 </div>
                 <div className="row p-0">
                   <div className="col-md-6">
                     <div className="input-group">
                       <input type="text" required />
-                      <label htmlFor="">username</label>
+                      <label htmlFor="">City</label>
                     </div>
                   </div>
                   <div className="col-md-6">
                     <div className="input-group">
                       <input type="text" required />
-                      <label htmlFor="">username</label>
-                    </div>
-                  </div>
-                </div>
-                <div className="row p-0">
-                  <div className="col-md-6">
-                    <div className="input-group">
-                      <input type="text" required />
-                      <label htmlFor="">username</label>
-                    </div>
-                  </div>
-                  <div className="col-md-6">
-                    <div className="input-group">
-                      <input type="text" required />
-                      <label htmlFor="">username</label>
+                      <label htmlFor="">Postal Code</label>
                     </div>
                   </div>
                 </div>
                 <div className="col-md-12">
                   <div className="input-group">
-                    <input type="text" required />
-                    <label htmlFor="">username</label>
+                    <textarea  required className="note-section" />
+                    <label htmlFor="">Address Note (Optional)</label>
                   </div>
                 </div>
-                <div className="float">
-                <div className="row d-flex justify-content-between">
-<h1>hi</h1>
-<h1>gy</h1>
 
-                </div>
+                <div className="button-row">
+                  <button className="button1">Cancel</button>
+                  <button className="button2">Save</button>
                 </div>
               </div>
             </div>
@@ -96,8 +109,11 @@ const Manageaddress = () => {
           </div>
         </div>
       </div>
-    </> 
-  );
-};
+    </>
+  )
+}
 
-export default Manageaddress;
+export default Createaddress
+
+
+

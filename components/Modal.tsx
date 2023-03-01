@@ -1,5 +1,8 @@
 import React from "react";
 import img1 from "../public/images/img1.jpg";
+import img2 from "../public/images/img4.png";
+import img3 from "../public/images/img5.png";
+
 import Image from "next/image";
 const Modal = () => {
   return (
@@ -52,8 +55,8 @@ const Modal = () => {
                         className="rounded-circle"
                       />
                       <div className="ms-3">
-                        <h5 className=" mb-1">John Doe</h5>
-                        <p className="text-muted mb-0">john.doe@gmail.com</p>
+                        <h5 className=" mb-1">Muhammad Zeeshan</h5>
+                        <p className="text-muted mb-0">Personal</p>
                       </div>
                     </div>
                     <div className="form-check form-check-inline">
@@ -69,15 +72,15 @@ const Modal = () => {
                   <hr className="line-color" />
                   <li className="list-group-item d-flex justify-content-between align-items-center">
                     <div className="d-flex align-items-center">
-                      <img
-                        src="https://mdbootstrap.com/img/new/avatars/6.jpg"
+                      <Image
+                        src={img2}
                         className="rounded-circle"
                         alt=""
                         style={{ width: 45, height: 45 }}
                       />
                       <div className="ms-3">
-                        <h5 className="mb-1">Alex Ray</h5>
-                        <p className="text-muted mb-0">alex.ray@gmail.com</p>
+                        <h5 className="mb-1">Expert Services</h5>
+                        <p className="text-muted mb-0">Director</p>
                       </div>
                     </div>
                     <div className="form-check form-check-inline">
@@ -93,16 +96,16 @@ const Modal = () => {
                   <hr className="line-color" />
                   <li className="list-group-item d-flex justify-content-between align-items-center mb-3">
                     <div className="d-flex align-items-center">
-                      <img
-                        src="https://mdbootstrap.com/img/new/avatars/7.jpg"
+                      <Image
+                        src={img3}
                         className="rounded-circle"
                         alt=""
                         style={{ width: 45, height: 45 }}
                       />
                       <div className="ms-3">
-                        <h6 className="mb-1">Kate Hunington</h6>
+                        <h6 className="mb-1">Plexaar IT Company</h6>
                         <p className="text-muted mb-0">
-                          kate.hunington@gmail.com
+                          Director
                         </p>
                       </div>
                     </div>
@@ -125,6 +128,7 @@ const Modal = () => {
           </div>
         </div>
       </div>
+      {/* ============================address info========================== */}
     </>
   );
 };

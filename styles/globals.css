@@ -1,46 +1,53 @@
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
 }
-.modal-content {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    width: 90%;
-    pointer-events: auto;
-    background-color: #fff;
-    background-clip: padding-box;
-    border-radius: 0.3rem;
+.card{
+  border-radius: 12px;
 }
-.create-account{
+.modal-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  pointer-events: auto;
+  background-color: #fff;
+  background-clip: padding-box;
+  border-radius: 0.3rem;
+}
+.create-account {
   width: 271px;
   margin: auto;
   margin-bottom: 10px;
   height: 44px;
 }
-.list-group-item{
+.list-group-item {
   border: none;
 }
-.form-check:checked {
-  background-color: #DC0000;
-  border-color: #DC0000;
+.form-check-input:checked {
+  background-color: #db0406;
+  border-color: #db0406;
 }
-.line-color{
-  background-color: #CCD2D8;
+.form-check-input[type="radio"] {
+  border-radius: 50%;
+  box-shadow: none;
+}
+.line-color {
+  background-color: #ccd2d8;
   width: 100%;
   height: 10px;
 }
-.grey-text{
-  color: #CCD2D8;
-
+.grey-text {
+  color: #ccd2d8;
 }
 /* ===================manage address=============== */
 .create-address {
   width: 141px;
   height: 25px;
   margin: 0 420px 5px 0;
-  font-family: 'Poppins', sans-serif;  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
   font-size: 18px;
   font-weight: 600;
   font-stretch: normal;
@@ -50,11 +57,12 @@
   text-align: left;
   color: #4a4a4a;
 }
-.address-detail{
+.address-detail {
   width: 561px;
   height: 60px;
   margin: 5px 0 0;
-  font-family: 'Poppins', sans-serif;  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
   font-weight: normal;
   font-stretch: normal;
   font-style: normal;
@@ -63,58 +71,261 @@
   text-align: left;
   color: #ccd2d8;
 }
-.card{
+.card {
   border: 2px solid rgb(169 166 166 / 13%);
-  
-
 }
 .Learn-more {
   height: 20px;
-    font-family: 'Poppins', sans-serif;  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
   font-weight: 600;
   font-stretch: normal;
   font-style: normal;
   line-height: 1.29;
-   color: #db0406;
-   text-decoration: none;
-
+  color: #db0406;
+  text-decoration: none;
 }
- .Learn-more:hover {
-
-   color: #db0406;
-   
+.Learn-more:hover {
+  color: #db0406;
 }
-.input-group{
+/* =======floating input feilds======== */
+.Beck-Hall {
+  width: 482px;
+  height: 20px;
+  margin: 0 0 0 5px;
+  font-family: Poppins;
+  font-size: 14px;
+  font-weight: 500;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: normal;
+  letter-spacing: normal;
+  text-align: left;
+  color: #4a4a4a;
+}
+.input-group {
   position: relative;
   margin: 20px 0;
 }
-.input-group label{
+.input-group label {
   position: absolute;
   top: 50%;
   left: 5px;
   transform: translateY(-50%);
   font-size: 16px;
-  color: #111111;
+     color: #E0E0E0;
   padding: 0 5px;
   pointer-events: none;
   transition: 0.5s;
 }
-.input-group input{
-  width:100% ;
+.input-group input {
+  width: 100%;
   height: 40px;
   font-size: 16px;
   color: #000000;
   padding: 0 10px;
   background: transparent;
   border: 2px solid rgb(169 166 166 / 13%);
-  border-radius: 5px;
+  border-radius: 10px 10px 10px 10px !important;
+  height: 53px;
 }
-.input-group input:focus~label,
-.input-group input:focus~label{
-  top:0;
-  font-size:12px;
+.input-group textarea {
+  width: 100%;
+  height: 40px;
+  font-size: 16px;
+  color: #000000;
+  padding: 0 10px;
+  background: transparent;
+  border: 2px solid rgb(169 166 166 / 13%);
+  border-radius: 10px;
+}
+
+.input-group input:focus ~ label,
+.input-group input:focus ~ label {
+  top: 0;
+  font-size: 12px;
+  color: #dd1315;
   background-color: white;
 }
-.float{
-  float: left;
+.input-group textarea:focus ~ label,
+.input-group textarea:focus ~ label {
+  top: 0;
+  font-size: 12px;
+  color: #dd1315;
+  background-color: white;
 }
+.note-section {
+  height: 100px !important;
+}
+/* ================= */
+
+/* ============== */
+.button-row {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.button1 {
+  margin-left: 10px;
+  padding: 8px 16px;
+  background-color: #fdf2f2;
+  border: none;
+  color: #dd1315;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+.button2 {
+  margin-left: 10px;
+  padding: 8px 16px;
+  background-color: #db0406;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+/* =========floating input feilds end====== */
+/* ============manage address============== */
+.manage-address {
+  width: 172px;
+  height: 25px;
+  margin: 0 420px 5px 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-size: 18px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: left;
+  color: #4a4a4a;
+}
+.manage-address-detail {
+  width: 474px;
+  height: 60px;
+  margin: 5px 0 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.43;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ccd2d8;
+}
+.badge {
+  display: inline-block;
+  background-color: #fff5e5;
+  color: #ff9800;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 4px 8px;
+  border-radius: 4px;
+  margin-right: 10px;
+}
+.address-info {
+  width: 132px;
+  height: 20px;
+  margin: 0 0 0 10px;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2.86;
+  letter-spacing: normal;
+  text-align: left;
+  color: #444;
+}
+.Office {
+  width: 495px;
+  height: 20px;
+  margin: 10px 0 0;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: normal;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1.43;
+  letter-spacing: normal;
+  text-align: left;
+  color: #201f1f;
+}
+.address-info1 {
+  width: 132px;
+  height: 20px;
+  margin: 0 0 0 10px;
+  font-family: "Poppins", sans-serif;
+  font-size: 14px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 2.86;
+  letter-spacing: normal;
+  text-align: left;
+  color: #ccd2d8;
+}
+
+.icon-text {
+  display: flex;
+  align-items: center;
+}
+
+.icon-text span {
+  margin-top: 15px;
+  color: #ccd2d8;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+}
+/* ==================map page================= */
+.input-search input {
+  border: none;
+  padding: 10px;
+  border-radius: 7px;
+  width: 377px;
+  margin-left: 63px;
+  height: 44px;
+}
+.input-search .skip-button {
+  margin-left: 689px;
+  padding: 13px 21px;
+    background-color: #db0406;
+  border: none;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+}
+/* .react-datalist-input__listbox {
+  position: absolute;
+  padding: 0;
+  border: var(--border);
+  border-radius: var(--border-radius);
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  box-shadow: var(--shadow);
+  z-index: 10;
+  width: 415px;
+  margin-left: 55px !important;
+} */
+/* .datalist
+{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  direction: row;
+} */
