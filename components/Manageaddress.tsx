@@ -17,7 +17,7 @@ const Manageaddress = () => {
           </div>
           <div className="col-md-9">
             {/* ===========create addres ssection============= */}
-            <div className="card p-4">
+            <div className="card p-3">
               <div className="row d-flex justify-content-between">
                 <div className="col-md-9">
                   <h4 className="manage-address">Manage Addresses</h4>
@@ -97,7 +97,7 @@ const Manageaddress = () => {
 
             {/* =========create address section end============= */}
             {/* ===========input feilds section start================ */}
-            <div className="card p-4 mt-4">
+            <div className="card p-3 mt-4">
               <div className="d-flex bd-highlight">
                 <div className="p-2 flex-grow-1 bd-highlight">
                   <span style={{ fontSize: "20px" }}>
@@ -110,7 +110,7 @@ const Manageaddress = () => {
                 </div>
                 <div className="p-2 bd-highlight">
                   <div className="badge">New Added</div>
-                  <span style={{ fontSize: "15px" }}>
+                  <span style={{ fontSize: "15px",color:"#ccd2d8" }}>
                     <BsThreeDotsVertical />
                   </span>
                 </div>
@@ -147,7 +147,7 @@ const Manageaddress = () => {
                   </p>
                 </div>
                 <div className="p-2 bd-highlight">
-                  <span style={{ fontSize: "15px" }}>
+                <span style={{ fontSize: "15px",color:"#ccd2d8" }}>
                     <BsThreeDotsVertical />
                   </span>
                 </div>
@@ -167,7 +167,7 @@ const Manageaddress = () => {
                   </p>
                 </div>
                 <div className="p-2 bd-highlight">
-                  <span style={{ fontSize: "15px" }}>
+                <span style={{ fontSize: "15px",color:"#ccd2d8" }}>
                     <BsThreeDotsVertical />
                   </span>
                 </div>

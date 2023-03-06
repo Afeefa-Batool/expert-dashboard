@@ -29,8 +29,8 @@ const Modal = () => {
             <div className="modal-content">
               <Image
                 src={img1}
-                height={100}
-                width={100}
+                height={90}
+                width={90}
                 alt="create account"
                 className="rounded-circle mx-auto d-block mt-3"
               />
@@ -51,12 +51,12 @@ const Modal = () => {
                       <img
                         src="https://mdbootstrap.com/img/new/avatars/8.jpg"
                         alt=""
-                        style={{ width: 45, height: 45 }}
+                        style={{ width: 50, height: 50 }}
                         className="rounded-circle"
                       />
                       <div className="ms-3">
                         <h5 className=" mb-1">Muhammad Zeeshan</h5>
-                        <p className="text-muted mb-0">Personal</p>
+                        <p className="mb-0">Personal</p>
                       </div>
                     </div>
                     <div className="form-check form-check-inline">
@@ -76,11 +76,11 @@ const Modal = () => {
                         src={img2}
                         className="rounded-circle"
                         alt=""
-                        style={{ width: 45, height: 45 }}
+                        style={{ width: 50, height: 50 }}
                       />
                       <div className="ms-3">
                         <h5 className="mb-1">Expert Services</h5>
-                        <p className="text-muted mb-0">Director</p>
+                        <p className="mb-0">Director</p>
                       </div>
                     </div>
                     <div className="form-check form-check-inline">
@@ -100,11 +100,11 @@ const Modal = () => {
                         src={img3}
                         className="rounded-circle"
                         alt=""
-                        style={{ width: 45, height: 45 }}
+                        style={{ width: 50, height: 50 }}
                       />
                       <div className="ms-3">
-                        <h6 className="mb-1">Plexaar IT Company</h6>
-                        <p className="text-muted mb-0">
+                        <h5 className="mb-1">Plexaar IT Company</h5>
+                        <p className="mb-0">
                           Director
                         </p>
                       </div>

@@ -7,38 +7,31 @@ import { AiOutlineInfoCircle } from "react-icons/ai";
 import { AiOutlineHome } from "react-icons/ai";
 import styles from "../styles/Manage-emails.module.css";
 import { AiOutlineRight } from "react-icons/ai";
-import {IoMdInformationCircle} from "react-icons/io"
-import {IoIosArrowBack} from "react-icons/io"
+import { IoMdInformationCircle } from "react-icons/io";
+import { IoIosArrowBack } from "react-icons/io";
 const Manageemails = () => {
   return (
     <>
       <div className="container">
-        
         <div className="row d-flex justify-content-between">
           <div className="col-md-3">
             <div className="card card-border">side bar</div>
           </div>
           <div className="col-md-9">
             {/* ===========create addres ssection============= */}
-            <a
-                    href=""
-                    className={styles.back}
-                  
-                  >
-                   <span style={{marginRight:"7px"}}>
-                   <IoIosArrowBack />
-
-                   </span>
-                   Back
-                  </a>
+            <a href="" className={styles.back}>
+              <span style={{ marginRight: "7px" }}>
+                <IoIosArrowBack />
+              </span>
+              Back
+            </a>
             <div className="card p-4 mt-2">
               <div className="row d-flex justify-content-between">
-                
                 <div className="col-md-9">
-                  <h4 className={"styles.manage-address"}>Manage Addresses</h4>
+                  <h4 className={styles.manage_emails}>Manage Emails</h4>
                   <p className="manage-address-detail">
-                    Don't worry, your information is private and we will not
-                    share this info with anyone outside Expert!
+                  Don't worry, your information is private and we will not share this info with
+anyone outside Expert!
                   </p>
                 </div>
                 <div className="col-md-3">
@@ -55,7 +48,7 @@ const Manageemails = () => {
 
             {/* =========create address section end============= */}
             {/* ===========input feilds section start================ */}
-            <div className="card p-4 mt-4">
+            <div className="card p-3 mt-4">
               <div className="d-flex bd-highlight">
                 <div className="p-2 flex-grow-1 bd-highlight">
                   <span className={styles.email}>Expert Account Email</span>
@@ -66,10 +59,10 @@ const Manageemails = () => {
                       can’t change this address.
                     </span>
                   </div>
-                  <p className="Office">malik.zeeshan7458@gmail.com</p>
+                  <p className={styles.email_address}>malik.zeeshan7458@gmail.com</p>
                 </div>
                 <div className="p-2 bd-highlight">
-                  <span style={{ fontSize: "15px" }}>
+                  <span style={{ fontSize: "15px",color:"#ccd2d8" }}>
                     <BsThreeDotsVertical />
                   </span>
                 </div>
@@ -79,16 +72,14 @@ const Manageemails = () => {
               {/* ============section2============= */}
               <div className="d-flex bd-highlight">
                 <div className="p-2 flex-grow-1 bd-highlight">
-           
                   <span className={styles.email}>Recovery Email</span>
                   <div className="icon-text">
                     <span>
-                    The email where expert can contact you if there’s unusual activity in your account.
+                      The email where expert can contact you if there’s unusual
+                      activity in your account.
                     </span>
                   </div>
-                  <p className="Office">
-                  malik.zeeshan268@gmail.com
-                  </p>
+                  <p className={styles.email_address}>malik.zeeshan268@gmail.com</p>
                   <a
                     href=""
                     className="Learn-more mt-5"
@@ -100,14 +91,19 @@ const Manageemails = () => {
                   </a>
                 </div>
                 <div className="p-2 bd-highlight">
-                  <div className={styles.badge}> 
-                  <span style={{ fontSize: "16px",color:"#F6AE35",marginRight:"6px" }}>
-                  <IoMdInformationCircle />
-                  </span>
-                  
-                  
-                  Unverified</div>
-                  <span style={{ fontSize: "15px" }}>
+                  <div className={styles.badge}>
+                    <span
+                      style={{
+                        fontSize: "16px",
+                        color: "#F6AE35",
+                        marginRight: "6px",
+                      }}
+                    >
+                      <IoMdInformationCircle />
+                    </span>
+                    Unverified
+                  </div>
+                  <span style={{ fontSize: "15px",color:"#ccd2d8" }}>
                     <BsThreeDotsVertical />
                   </span>
                 </div>
@@ -117,27 +113,21 @@ const Manageemails = () => {
               {/* ===============section3=================== */}
               <div className="d-flex bd-highlight">
                 <div className="p-2 flex-grow-1 bd-highlight">
-              
                   <span className={styles.email}>Contact email</span>
                   <div className="icon-text">
-      
-
-                <span>
-                The email where you get information about most of the expert services that you use with this account.
-                </span>
-              </div>
-                  <p className="Office">
-                  malik.zeeshan7458@gmail.com
-                  </p>
+                    <span>
+                      The email where you get information about most of the
+                      expert services that you use with this account.
+                    </span>
+                  </div>
+                  <p className={styles.email_address}>malik.zeeshan7458@gmail.com</p>
                 </div>
                 <div className="p-2 bd-highlight">
-                  <span style={{ fontSize: "15px" }}>
+                <span style={{ fontSize: "15px",color:"#ccd2d8" }}>
                     <BsThreeDotsVertical />
                   </span>
                 </div>
               </div>
-
-             
             </div>
           </div>
         </div>

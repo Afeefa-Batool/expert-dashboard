@@ -6,6 +6,7 @@ import { BiBuildings } from "react-icons/bi";
 const Createaddress = () => {
   return (
     <>
+
       <div className="container">
         <div className="row d-flex justify-content-between">
           <div className="col-md-3">
@@ -45,15 +46,18 @@ const Createaddress = () => {
             <div className="card p-4 mt-4">
               <div className="row d-flex justify-content-around">
                 <div className="col-md-12">
-                  <div className="input-group">
-                    <input type="text" required value={"abc"}/>
-                    {/* <label htmlFor="">username</label> */}
-                    <label htmlFor="">
-                      {/* <BiBuildings />
-                      <span className="Beck-Hall">Beck Hall, Cove Road Malham Yorkshire, United Kingdom (BD23 4DJ)</span> */}
-                    Address
-                    </label>
+                  <div className="input-group input-icons">
+                  <i className="fa fa-user icon">
+      </i>
+      {/* <p className="icon">Flat & Building Number</p> */}
+                    <input type="text" required />
+                    <label htmlFor="">Address</label>
                   </div>
+                  {/* <div className="input-icons">
+      <i className="fa fa-user icon">
+      </i>
+      <input className="input-field" type="text" placeholder="Username" />
+    </div> */}
                 </div>
                 <div className="row p-0">
                   <div className="col-md-12">
@@ -62,7 +66,6 @@ const Createaddress = () => {
                       <label htmlFor="">Address Name</label>
                     </div>
                   </div>
-           
                 </div>
                 <div className="row p-0">
                   <div className="col-md-6">
@@ -94,7 +97,7 @@ const Createaddress = () => {
                 </div>
                 <div className="col-md-12">
                   <div className="input-group">
-                    <textarea  required className="note-section" />
+                    <textarea required className="note-section" />
                     <label htmlFor="">Address Note (Optional)</label>
                   </div>
                 </div>
@@ -110,10 +113,7 @@ const Createaddress = () => {
         </div>
       </div>
     </>
-  )
-}
+  );
+};
 
-export default Createaddress
-
-
-
+export default Createaddress;

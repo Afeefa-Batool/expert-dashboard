@@ -1,7 +1,8 @@
-import React from "react";
+import RolesAndPermissions from '@/components/RolesAndPermissions'
+import React from 'react'
 import Head from "next/head";
-import Manageaddress from "@/components/Manageaddress";
-const addresspage = () => {
+
+const Roles = () => {
   return (
     <>
       <Head>
@@ -31,10 +32,9 @@ const addresspage = () => {
         crossOrigin="anonymous"
       />
       </Head>
-      <Manageaddress />
-
+    <RolesAndPermissions/>
     </>
-  );
-};
+  )
+}
 
-export default addresspage;
+export default Roles
