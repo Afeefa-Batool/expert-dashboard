@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import Createaddress from "@/components/Createaddress";
+import Create_Address_Page from "@/components/Create_Address_Page";
 const addresspage = () => {
   return (
     <>
@@ -31,6 +32,7 @@ const addresspage = () => {
         crossOrigin="anonymous"
       />
       </Head>
+      <Create_Address_Page/>
       <Createaddress />
 
     </>
