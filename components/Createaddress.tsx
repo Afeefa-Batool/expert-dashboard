@@ -19,14 +19,14 @@ const Createaddress = () => {
     addressType: 0,
   });
 
-  const handleChange = (e) => {
+  const handleChange = (e:any) => {
     setAddress({
       ...address,
       [e.target.name]: e.target.value,
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = (e:any) => {
     e.preventDefault();
     console.log(address);
     // TODO: Send the address object to the API endpoint

@@ -478,3 +478,9 @@ hr {
   color: #aaa;
 }
 /* ==================================== */
+/* =========profile page========== */
+.password-input {
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+}
