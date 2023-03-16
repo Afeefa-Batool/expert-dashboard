@@ -51,15 +51,18 @@ const Chooseservices = () => {
                 </div>
                 <div className={styles.right_section}>
                   <div className="search-wrapper">
-                  <span style={{ marginBottom: "3px", marginLeft: "10px",color:"#ccd2d8" }}>
+                    <span
+                      style={{
+                        marginBottom: "3px",
+                        marginLeft: "10px",
+                        color: "#ccd2d8",
+                      }}
+                    >
                       <FiSearch />
                     </span>
                     <input type="text" placeholder="Search" />
                   </div>
                   <div className={styles.add_button}>
-                    {/* <span style={{ color: "#ffffff" }}>
-                      <AiOutlinePlus />
-                    </span> */}
                     <p>+ Add</p>
                   </div>
                 </div>

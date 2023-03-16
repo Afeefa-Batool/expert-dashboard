@@ -16,6 +16,13 @@ import axios from "axios";
 const styles = {
   input: {
     borderRadius: 10,
+// borderColor:1px solid #f1f6fa,
+  },
+};
+const styles1 = {
+  input: {
+    borderRadius: 10,
+    width:"790px",
   },
 };
 const bull = (
@@ -155,67 +162,7 @@ const Create_Address_Page = () => {
           onChange={(e) => setAddress(e.target.value)}
         />
 
-        {/* <label htmlFor="address-name">Address Name:</label>
-        <input
-          type="text"
-          id="address-name"
-          name="addressName"
-          value={addressName}
-          onChange={(e) => setAddressName(e.target.value)}
-        />
-
-        <label htmlFor="flat">Flat:</label>
-        <input
-          type="text"
-          id="flat"
-          name="flat"
-          value={flat}
-          onChange={(e) => setFlat(e.target.value)}
-        />
-
-        <label htmlFor="street-address">Street Address:</label>
-        <input
-          type="text"
-          id="street-address"
-          name="streetAddress"
-          value={streetAddress}
-          onChange={(e) => setStreetAddress(e.target.value)}
-        />
-
-        <label htmlFor="city">City:</label>
-        <input
-          type="text"
-          id="city"
-          name="city"
-          value={city}
-          onChange={(e) => setCity(e.target.value)}
-        />
-
-        <label htmlFor="postal-code">Postal Code:</label>
-        <input
-          type="text"
-          id="postal-code"
-          name="postalCode"
-          value={postalCode}
-          onChange={(e) => setPostalCode(e.target.value)}
-        />
-
-        <label htmlFor="state">State:</label>
-        <input
-          type="text"
-          id="state"
-          name="state"
-          value={state}
-          onChange={(e) => setState(e.target.value)}
-        />
-
-        <label htmlFor="address-note">Address Note:</label>
-        <textarea
-          id="address-note"
-          value={addressNote}
-          name="addressNote"
-          onChange={(e) => setAddressNote(e.target.value)}
-        ></textarea> */}
+ 
 
         <button type="submit">Submit</button>
       </form>
@@ -257,18 +204,17 @@ const Create_Address_Page = () => {
             {/* ===========input feilds section start================ */}
             <Card
               sx={{
-                minWidth: 275,
+              
                 padding: "20px",
                 marginTop: "15px",
                 borderRadius: "12px",
               }}
             >
-              <Grid container columns={16}>
+              <Grid container >
                 <Grid item xs={12}>
                   <Box
                     sx={{
-                      width: 500,
-                      maxWidth: "100%",
+              marginBottom:"14px",
                       borderRadius: 20,
                     }}
                   >
@@ -283,12 +229,12 @@ const Create_Address_Page = () => {
                   </Box>
                 </Grid>
               </Grid>
-              <Grid container columns={16}>
+              <Grid container >
                 <Grid item xs={12}>
                   <Box
                     sx={{
-                      width: 500,
-                      maxWidth: "100%",
+                      marginBottom:"14px",
+
                       marginTop: "15px",
                     }}
                   >
@@ -304,7 +250,7 @@ const Create_Address_Page = () => {
                 </Grid>
               </Grid>
               {/* =============row 3================= */}
-              <Box sx={{ width: "100%" }}>
+              <Box >
                 <Grid
                   container
                   rowSpacing={1}
@@ -313,8 +259,8 @@ const Create_Address_Page = () => {
                   <Grid item xs={6}>
                     <Box
                       sx={{
-                        width: 500,
-                        maxWidth: "100%",
+                        marginBottom:"14px",
+
                         marginTop: "15px",
                       }}
                     >
@@ -361,6 +307,8 @@ const Create_Address_Page = () => {
                         width: 500,
                         maxWidth: "100%",
                         marginTop: "15px",
+                        marginBottom:"14px",
+
                       }}
                     >
                       <TextField
@@ -394,12 +342,12 @@ const Create_Address_Page = () => {
                 </Grid>
               </Box>
               {/* ===========row 5============ */}
-              <Grid container columns={16}>
+              <Grid container >
                 <Grid item xs={12}>
                   <Box
                     sx={{
-                      width: 500,
-                      maxWidth: "100%",
+                      marginBottom:"14px",
+
                       borderRadius: "50px",
                       marginTop: "15px",
                     }}
@@ -417,13 +365,16 @@ const Create_Address_Page = () => {
               </Grid>
               {/* ============row 6============ */}
 
-              <Grid container columns={16}>
+              <Grid >
                 <Grid item xs={12}>
-                  <Box
+                <Box
                     sx={{
+              
                       borderRadius: "50px",
                       marginTop: "15px",
+                      marginBottom:"30px",
                     }}
+                  
                   >
                     <TextField
                       id="my-textarea"
@@ -431,7 +382,7 @@ const Create_Address_Page = () => {
                       multiline
                       rows={4}
                       InputProps={{
-                        style: styles.input,
+                        style: styles1.input,
                       }}
                     />
                   </Box>

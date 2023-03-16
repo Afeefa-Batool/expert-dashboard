@@ -96,3 +96,9 @@
   border: solid 0.5px #dc0000;
   cursor: pointer;
 }
+/* ===========contact info================= */
+.header_div{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

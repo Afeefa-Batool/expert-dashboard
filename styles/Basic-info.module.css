@@ -1,0 +1,26 @@
+.Basic_info{
+  height: 25px;
+  margin: 0 503px 12px 0;
+  font-family: Poppins;
+  font-size: 18px;
+  font-weight: 600;
+  font-stretch: normal;
+  font-style: normal;
+  line-height: 1;
+  letter-spacing: normal;
+  text-align: left;
+  color: #4a4a4a;
+}
+.Basic_info1{
+    height: 25px;
+    margin-top: 20px;
+    font-family: Poppins;
+    font-size: 18px;
+    font-weight: 600;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1;
+    letter-spacing: normal;
+    text-align: left;
+    color: #4a4a4a;
+  }

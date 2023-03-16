@@ -5,9 +5,40 @@ import Image from "next/image";
 import Link from "next/link";
 import { IoIosArrowForward } from "react-icons/io";
 import { HiBadgeCheck } from "react-icons/hi";
+import { RxDotFilled } from "react-icons/rx";
+import { GoPrimitiveDot } from "react-icons/go";
+import { useRouter } from "next/router";
+
 const Profile_page = () => {
+  const router = useRouter();
+
+  function BasicInfo() {
+    router.push("/");
+    // window.open('/', '_blank');
+  }
+  // function ContactInfo() {
+  //   router.push('/');
+  // }
+  function Phone() {
+    router.push("/Map-location");
+    // window.open('/', '_blank');
+  }
+  function Password() {
+    router.push("/Map-location");
+    // window.open('/', '_blank');
+  }
+  function PersonalDocuments() {
+    router.push("/Map-location");
+    // window.open('/', '_blank');
+  }
   return (
     <>
+      {/* <div onClick={handleClick1} style={{ cursor: 'pointer' }}>
+      Click me to go to the next page
+    </div> */}
+      {/* <div onClick={handleClick2} style={{ cursor: 'pointer' }}>
+      Click me to go to the next page
+    </div> */}
       <div className="container">
         <div className="row d-flex justify-content-between">
           <div className="col-md-3">
@@ -36,7 +67,11 @@ const Profile_page = () => {
               </div>
             </div>
             {/* ===========card 2=========== */}
-            <div className="card p-4 mt-3">
+            <div
+              className="card p-4 mt-3"
+              onClick={BasicInfo}
+              style={{ cursor: "pointer" }}
+            >
               <h3 className={style.basic_info}>Basic Info</h3>
               <div className={style.wrapper_Text}>
                 <div>
@@ -88,51 +123,85 @@ const Profile_page = () => {
               <hr className="line-color" />
             </div>
             {/* ===========card 3=========== */}
+            {/* <div className="card p-4 mt-3" onClick={ContactInfo} style={{ cursor: 'pointer' }}> */}
+
             <div className="card p-4 mt-3">
               <h3 className={style.basic_info}>Contact Info</h3>
-              <div className={style.wrapper_Text}>
-                <div>
-                  <p className={style.left_text}>Emails</p>
-                </div>
-                <div className={style.style_left_text}>
-                  <div>
-                    <p className={style.right_email}>
+
+              {/* <p className={style.right_email}>junaidahmed999@gmail.com</p> */}
+              {/* ======row 1========= */}
+              <div className={style.row_two}>
+                <div className={style.emails}>.</div>
+                <div className={style.right_section}>
+                  <div className={style.right_elements}>
+                    <p className={style.right_email11}>
                       junaidahmed999@gmail.com
                     </p>
-                    <p className={style.right_email}>
-                      malik.zeeshan7458@gmail.com
-                    </p>
-                    <div className={style.third_email}>
-                      <div className={style.badge}>
-                        <span
-                          style={{
-                            fontSize: "16px",
-                            color: "#5fdf5a",
-                            marginRight: "3px",
-                            paddingBottom:"15px",
-                          }}
-                        >
-                          <HiBadgeCheck />
-                          verified
-                        </span>
-                                   
-                      </div>
-                      <p className={style.right_email1}>
-                        muhammad.zeeshan123@gmail.com
-                      </p>
-                    </div>
+
+                    <span style={{ marginBottom: "19px", color: "#ccd2d8" }}>
+                      .
+                    </span>
                   </div>
-                  <span style={{ marginBottom: "19px", color: "#ccd2d8" }}>
-                    <IoIosArrowForward />
-                  </span>
                 </div>
               </div>
+              {/* ========row 2========== */}
+
+              <div className={style.row_two}>
+                <div className={style.emails}>
+                  <p>Emails</p>
+                </div>
+                <div className={style.right_section}>
+                  <div className={style.right_elements}>
+                    <p className={style.right_email13}>
+                      malik.zeeshan7458@gmail.com
+                    </p>
+
+                    <span style={{ marginBottom: "19px", color: "#ccd2d8" }}>
+                      <IoIosArrowForward />
+                    </span>
+                  </div>
+                </div>
+              </div>
+              {/* =========row 3========== */}
+              <div className={style.row_two}>
+                <div className={style.emails}></div>
+                <div className={style.right_section}>
+                  <div className={style.right_elements}>
+                    <div className={style.badge}>
+                      <span
+                        style={{
+                          fontSize: "16px",
+                          color: "#5fdf5a",
+                          marginRight: "3px",
+                          paddingBottom: "15px",
+                        }}
+                      >
+                        <HiBadgeCheck />
+                        verified
+                      </span>
+                                
+                    </div>
+                    <p className={style.right_email12}>
+                      muhammad.zeeshan123@gmail.com
+                    </p>
+
+                    <span
+                      style={{ marginBottom: "19px", color: "#ccd2d8" }}
+                    ></span>
+                  </div>
+                </div>
+              </div>
+
               <hr className="line-color" />
               <div className={style.wrapper_Text}>
                 <div>
                   <p className={style.left_text}>Phone</p>
                 </div>
-                <div className={style.style_left_text}>
+                <div
+                  className={style.style_left_text}
+                  onClick={Phone}
+                  style={{ cursor: "pointer" }}
+                >
                   <p className={style.right_text}>03035579649</p>
                   <span style={{ marginBottom: "19px", color: "#ccd2d8" }}>
                     <IoIosArrowForward />
@@ -141,19 +210,44 @@ const Profile_page = () => {
               </div>
             </div>
             {/* ===========card 4=========== */}
-            <div className="card p-4 mt-3">
+            <div
+              className="card p-4 mt-3"
+              onClick={Password}
+              style={{ cursor: "pointer" }}
+            >
               <h3 className={style.basic_info}>Password</h3>
+
               <div className={style.wrapper_Text}>
                 <div>
-                  <p className={style.left_text}>Last changed Oct 19</p>
+                  <p className={style.left_text}>Phone</p>
                 </div>
                 <div className={style.style_left_text}>
-                  <input
-                    type="password"
-                    id="password"
-                    name="password"
-                    className="password-input"
-                  />
+                  <p className={style.right_text}>
+                    <span style={{ marginRight: "-3px" }}>
+                      <GoPrimitiveDot />
+                    </span>
+                    <span style={{ marginRight: "-3px" }}>
+                      <GoPrimitiveDot />
+                    </span>
+                    <span style={{ marginRight: "-3px" }}>
+                      <GoPrimitiveDot />
+                    </span>
+                    <span style={{ marginRight: "-3px" }}>
+                      <GoPrimitiveDot />
+                    </span>
+                    <span style={{ marginRight: "-3px" }}>
+                      <GoPrimitiveDot />
+                    </span>
+                    <span style={{ marginRight: "-3px" }}>
+                      <GoPrimitiveDot />
+                    </span>
+                    <span style={{ marginRight: "-3px" }}>
+                      <GoPrimitiveDot />
+                    </span>
+                    <span style={{ marginRight: "-3px" }}>
+                      <GoPrimitiveDot />
+                    </span>
+                  </p>
                   <span style={{ marginBottom: "19px", color: "#ccd2d8" }}>
                     <IoIosArrowForward />
                   </span>
@@ -161,7 +255,11 @@ const Profile_page = () => {
               </div>
             </div>
             {/* ===========card 5=========== */}
-            <div className="card p-4 mt-3">
+            <div
+              className="card p-4 mt-3"
+              onClick={PersonalDocuments}
+              style={{ cursor: "pointer" }}
+            >
               <h3 className={style.basic_info}>Personal Documents</h3>
               <div className={style.wrapper_Text}>
                 <div>
