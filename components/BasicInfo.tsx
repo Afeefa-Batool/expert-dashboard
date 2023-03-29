@@ -94,56 +94,6 @@ const Basic_Info = () => {
                 </Grid>
               </Grid>
 
-              <hr className="line-color1" />
-              {/* ============first name========== */}
-
-              <h2 className={style.Basic_info1}>Gender</h2>
-              <Grid container>
-                <Grid item xs={12}>
-                  <Box
-                    sx={{
-                      borderRadius: 20,
-
-                      marginBottom: "25px",
-                    }}
-                  >
-                    <TextField
-                      fullWidth
-                      label="First Name"
-                      id="fullWidth"
-                      InputProps={{
-                        style: styles.input,
-                      }}
-                    />
-                  </Box>
-                </Grid>
-              </Grid>
-              <hr
-     className="line-color1"
-              />
-              {/* ============first name========== */}
-
-              <h2 className={style.Basic_info1}>Date Of Birth</h2>
-              <Grid container>
-                <Grid item xs={12}>
-                  <Box
-                    sx={{
-                      borderRadius: 20,
-                      width: "100%",
-                      marginBottom: "25px",
-                    }}
-                  >
-                    <TextField
-                      fullWidth
-                      label="First Name"
-                      id="fullWidth"
-                      InputProps={{
-                        style: styles.input,
-                      }}
-                    />
-                  </Box>
-                </Grid>
-              </Grid>
               {/* ===========row 6 text area============= */}
               <div className="button-row">
                 <button className="button2">Save & Continue</button>

@@ -4,37 +4,30 @@ import { styled } from "@mui/material/styles";
 import Box from "@mui/material/Box";
 import TextField from "@mui/material/TextField";
 import Paper from "@mui/material/Paper";
-import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
 import style from "../styles/Basic-info.module.css";
-
+import Visibility from "@mui/icons-material/Visibility";
+import VisibilityOff from "@mui/icons-material/VisibilityOff";
+import OutlinedInput from "@mui/material/OutlinedInput";
+import InputLabel from "@mui/material/InputLabel";
+import InputAdornment from "@mui/material/InputAdornment";
+import FormHelperText from "@mui/material/FormHelperText";
+import FormControl from "@mui/material/FormControl";
+import IconButton from "@mui/material/IconButton";
 const styles = {
   input: {
     borderRadius: 10,
     width: "100%",
-    borderColor: "red",
   },
 };
-const bull = (
-  <Box
-    component="span"
-    sx={{ display: "inline-block", mx: "2px", transform: "scale(0.8)" }}
-  >
-    •
-  </Box>
-);
-const Item = styled(Paper)(({ theme }) => ({
-  backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
-  ...theme.typography.body2,
-  padding: theme.spacing(1),
-  textAlign: "center",
-  color: theme.palette.text.secondary,
-}));
-const Password = () => {
-  function handleSubmit(event: any) {
-    event.preventDefault();
-  }
+const PasswordField = () => {
+  const [showPassword, setShowPassword] = React.useState(false);
 
+  const handleClickShowPassword = () => setShowPassword((show) => !show);
+
+  const handleMouseDownPassword = (event: any) => {
+    event.preventDefault();
+  };
   return (
     <>
       {/* ================================= */}
@@ -58,7 +51,7 @@ const Password = () => {
 
               <h2 className={style.Basic_info}>Email</h2>
 
-              <Grid container>
+              {/* <Grid container>
                 <Grid item xs={12}>
                   <Box
                     sx={{
@@ -83,9 +76,74 @@ const Password = () => {
                     />
                   </Box>
                 </Grid>
-              </Grid>
-
-              <div className="button-row" style={{ marginTop: "320px" }}>
+              </Grid> */}
+              <FormControl sx={{  width: "90ch" }} variant="outlined" style={{ borderRadius: '20px' }}>
+                <InputLabel htmlFor="outlined-adornment-password">
+                  Password
+                </InputLabel>
+                <OutlinedInput
+                  id="outlined-adornment-password"
+                  type={showPassword ? "text" : "password"}
+                  endAdornment={
+                    <InputAdornment position="end">
+                      <IconButton
+                        aria-label="toggle password visibility"
+                        onClick={handleClickShowPassword}
+                        onMouseDown={handleMouseDownPassword}
+                        edge="end"
+                      >
+                        {showPassword ? <VisibilityOff /> : <Visibility />}
+                      </IconButton>
+                    </InputAdornment>
+                  }
+                  label="Password"
+                />
+              </FormControl>
+              <FormControl sx={{  width: "90ch" }} variant="outlined" style={{ borderRadius: '20px',marginTop:"20px" }}>
+                <InputLabel htmlFor="outlined-adornment-password">
+                  Password
+                </InputLabel>
+                <OutlinedInput
+                  id="outlined-adornment-password"
+                  type={showPassword ? "text" : "password"}
+                  endAdornment={
+                    <InputAdornment position="end">
+                      <IconButton
+                        aria-label="toggle password visibility"
+                        onClick={handleClickShowPassword}
+                        onMouseDown={handleMouseDownPassword}
+                        edge="end"
+                      >
+                        {showPassword ? <VisibilityOff /> : <Visibility />}
+                      </IconButton>
+                    </InputAdornment>
+                  }
+                  label="Password"
+                />
+              </FormControl>
+              <FormControl sx={{  width: "90ch" }} variant="outlined" style={{ borderRadius: '20px',marginTop:"20px" }}>
+                <InputLabel htmlFor="outlined-adornment-password">
+                  Password
+                </InputLabel>
+                <OutlinedInput
+                  id="outlined-adornment-password"
+                  type={showPassword ? "text" : "password"}
+                  endAdornment={
+                    <InputAdornment position="end">
+                      <IconButton
+                        aria-label="toggle password visibility"
+                        onClick={handleClickShowPassword}
+                        onMouseDown={handleMouseDownPassword}
+                        edge="end"
+                      >
+                        {showPassword ? <VisibilityOff /> : <Visibility />}
+                      </IconButton>
+                    </InputAdornment>
+                  }
+                  label="Password"
+                />
+              </FormControl>
+              <div className="button-row" style={{ marginTop: "170px" }}>
                 <button className="button2">Save & Continue</button>
               </div>
             </Card>
@@ -98,4 +156,4 @@ const Password = () => {
   );
 };
 
-export default Password;
+export default PasswordField;

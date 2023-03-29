@@ -1,8 +1,8 @@
-import DateOfBirth from "@/components/DateOfBirth";
-import React from "react";
+import Phone from '@/components/Phone'
+import React from 'react'
 import Head from "next/head";
 
-const Date_of_Birth = () => {
+const Phone_Page = () => {
   return (
     <>
       <Head>
@@ -26,15 +26,16 @@ const Date_of_Birth = () => {
           integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm"
           crossOrigin="anonymous"
         />
-        <script
-          src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
-          integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
-          crossOrigin="anonymous"
-        />
+      <script
+        src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
+        crossOrigin="anonymous"
+      />
       </Head>
-      <DateOfBirth />
+    <Phone/>
+    
     </>
-  );
-};
+  )
+}
 
-export default Date_of_Birth;
+export default Phone_Page
