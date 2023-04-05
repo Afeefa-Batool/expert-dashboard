@@ -30,7 +30,7 @@ const Manageemails = () => {
                 <div className="col-md-9">
                   <h4 className={styles.manage_emails}>Manage Emails</h4>
                   <p className="manage-address-detail">
-                  Don't worry, your information is private and we will not share this info with
+                  Don&apos;t worry, your information is private and we will not share this info with
 anyone outside Expert!
                   </p>
                 </div>

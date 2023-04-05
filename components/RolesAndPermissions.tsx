@@ -1,5 +1,7 @@
 import React from "react";
 import img1 from "../public/images/img3.png";
+import img3 from "../public/images/profile2.png";
+
 import Image from "next/image";
 import { BiBuildings } from "react-icons/bi";
 import { BsThreeDotsVertical } from "react-icons/bs";
@@ -65,11 +67,18 @@ const RolesAndPermissions = () => {
             {/* ===========input feilds section start================ */}
             <div className="card p-4 mt-4">
               <div className="d-flex align-items-center">
-                <img
+                {/* <img
                   src="https://mdbootstrap.com/img/new/avatars/8.jpg"
                   alt=""
                   style={{ width: 60, height: 60, borderRadius: "8px" }}
-                />
+                /> */}
+                 <Image
+                    src={img3}
+                    height={60}
+                    width={60}
+                    style={{borderRadius: "8px" }}
+                    alt="create account"
+                  />
                 <div className="">
                   <h5 className={styles.Username}>Muhammad Zeeshan</h5>
                 </div>

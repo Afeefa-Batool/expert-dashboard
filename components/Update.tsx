@@ -31,9 +31,7 @@ const bull = (
   <Box
     component="span"
     sx={{ display: "inline-block", mx: "2px", transform: "scale(0.8)" }}
-  >
-    •
-  </Box>
+  ></Box>
 );
 const Item = styled(Paper)(({ theme }) => ({
   backgroundColor: theme.palette.mode === "dark" ? "#1A2027" : "#fff",
@@ -42,11 +40,25 @@ const Item = styled(Paper)(({ theme }) => ({
   textAlign: "center",
   color: theme.palette.text.secondary,
 }));
-const Create_Address_Page = ({}) => {
-  const [address, setAddress] = useState("");
+
+interface Address {
+  line1: string;
+  line2: string;
+  townCity: string;
+  postalCode: string;
+  state: string;
+  addressNote: string;
+}
+
+const Update = ({ addressProp }: any) => {
+  // ==================update code started=========================
+
+  const [line1, setLine1] = useState("");
+
+  console.log("--------------->", addressProp);
   const router = useRouter();
 
-  const [formData, setFormData] = useState({
+  const [address, setAddress] = useState<Address>({
     line1: "",
     line2: "",
     townCity: "",
@@ -54,29 +66,61 @@ const Create_Address_Page = ({}) => {
     state: "",
     addressNote: "",
   });
-  function handleSubmit(event: any) {
+  useEffect(() => {
+    setAddress({ ...addressProp, ModifiedBy: addressProp.userId });
+  }, []);
+  // useEffect(() => {
+  //   setAddress({ ...addressProp, ModifiedBy: addressProp.userId });
+  // }, [addressProp, address]);
+  // old code
+  const handleChange = (
+    event: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  ) => {
+    const { name, value } = event.target;
+    setAddress({ ...address, [name]: value });
+  };
+  const updateSubmit = async (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+    try {
+      console.log("------ updating address --------");
+      console.log(address);
+      console.log("------ updating address --------");
+      const response = await fetch(
+        "https://microexpertaddressapi-preprod.findanexpert.net/address_svc/pv/UserAddress/updateAddress",
+        {
+          method: "PUT",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(address),
+        }
+      );
 
-    axios
-      .post(
-        "https://microexpertaddressapi-preprod.findanexpert.net/address_svc/pv/UserAddress/addAddress",
-        formData
-      )
-      .then((response) => {
-        console.log(response);
+      if (!response.ok) {
+        const errorData = await response.json();
+        throw new Error(errorData.error); // Handle the error here
+      }
+
+      const data = await response.json();
+      console.log("-------- response ok ----------");
+      console.log(data);
+      console.log("-------- response ok ----------");
+      console.log(data); // Handle the response data here
+
+      if (data.code === 0) {
         router.push("/Manage-address-page");
-      })
-      .catch((error) => {
-        console.log(error);
-      });
-  }
+      } else {
+        alert(data.message);
+      }
+      // Redirect to another page using Next.js router
+    } catch (error) {
+      console.error(error);
+      // Handle the error here by displaying an error message to the user
+    }
+  };
 
-  function handleChange(event: any) {
-    setFormData({
-      ...formData,
-      [event.target.name]: event.target.value,
-    });
-  }
+  // =============update code end====================
+
   // ==================populate data in feild code ======================
   const [selectedLocation, setSelectedLocation] = useState("");
 
@@ -86,6 +130,8 @@ const Create_Address_Page = ({}) => {
       setSelectedLocation(location);
     }
   }, []);
+  // ==================populate data in feild code End======================
+
   return (
     <>
       <div className="container">
@@ -99,6 +145,7 @@ const Create_Address_Page = ({}) => {
               <div className="row d-flex justify-content-between">
                 <div className="col-md-9">
                   <h4 className="create-address">Create Address</h4>
+                  <p>{JSON.stringify(address)}</p>
                   <p className="address-detail">
                     Your home and work addresses are used to personalize your
                     experiences across Expert Services, like showing search
@@ -131,7 +178,7 @@ const Create_Address_Page = ({}) => {
                 borderRadius: "12px",
               }}
             >
-              <form action="" onSubmit={handleSubmit}>
+              <form action="" onSubmit={updateSubmit}>
                 <Grid container>
                   <Grid item xs={12}>
                     <Box
@@ -171,7 +218,9 @@ const Create_Address_Page = ({}) => {
                           style: styles.input,
                         }}
                         name="line1"
-                        value={formData.line1}
+                        value={address.line1}
+                        // onChange={(event) => setLine1(event.target.value)}
+                        // value={address.line1}
                         onChange={handleChange}
                       />
                     </Box>
@@ -194,15 +243,16 @@ const Create_Address_Page = ({}) => {
                       >
                         <TextField
                           fullWidth
-                          required
                           label="Flat & Building Number"
                           id="fullWidth"
                           InputProps={{
                             style: styles.input,
                           }}
                           name="line2"
-                          value={formData.line2}
+                          value={address.line2}
                           onChange={handleChange}
+                          // value={formData.line2}
+                          // onChange={handleChange}
                         />
                       </Box>{" "}
                     </Grid>
@@ -223,7 +273,7 @@ const Create_Address_Page = ({}) => {
                             style: styles.input,
                           }}
                         />
-                      </Box>{" "}
+                      </Box>
                     </Grid>
                   </Grid>
                 </Box>
@@ -252,8 +302,10 @@ const Create_Address_Page = ({}) => {
                             style: styles.input,
                           }}
                           name="townCity"
-                          value={formData.townCity}
+                          value={address.townCity}
                           onChange={handleChange}
+                          // value={formData.townCity}
+                          // onChange={handleChange}
                         />
                       </Box>{" "}
                     </Grid>
@@ -274,8 +326,9 @@ const Create_Address_Page = ({}) => {
                             style: styles.input,
                           }}
                           name="postalCode"
-                          value={formData.postalCode}
+                          value={address.postalCode}
                           onChange={handleChange}
+                          // onChange={handleChange}
                         />
                       </Box>
                     </Grid>
@@ -301,8 +354,9 @@ const Create_Address_Page = ({}) => {
                           style: styles.input,
                         }}
                         name="state"
-                        value={formData.state}
+                        value={address.state}
                         onChange={handleChange}
+                        // onChange={handleChange}
                       />
                     </Box>
                   </Grid>
@@ -328,7 +382,7 @@ const Create_Address_Page = ({}) => {
                           style: styles1.input,
                         }}
                         name="addressNote"
-                        value={formData.addressNote}
+                        value={address.addressNote}
                         onChange={handleChange}
                       />
                     </Box>
@@ -351,4 +405,9 @@ const Create_Address_Page = ({}) => {
   );
 };
 
-export default Create_Address_Page;
+export default Update;
+
+interface AddressI {
+  line1: string;
+  line2: string;
+}

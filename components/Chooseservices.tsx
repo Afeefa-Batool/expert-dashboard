@@ -20,7 +20,7 @@ const Chooseservices = () => {
                 <div className="col-md-9">
                   <h4 className="create-address">Manage Users</h4>
                   <p className="address-detail">
-                    Don't worry, your information is private and we will not
+                    Don&apos;t worry, your information is private and we will not
                     share this info with anyone outside Expert!
                   </p>
                   <a href="" className="Learn-more">

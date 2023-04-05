@@ -9,7 +9,7 @@ type MapProps = {
   apiKey: string;
 };
 
-const map = ({ apiKey }: MapProps) => {
+const MapComponent = ({ apiKey }: MapProps) => {
   const [query, setQuery] = useState("");
   const router = useRouter();
 
@@ -47,7 +47,8 @@ const map = ({ apiKey }: MapProps) => {
         }
       });
     }
-  }, []);
+  }, [router]);
+
   return (
     <>
       <div style={{ position: "fixed", top: 0, left: 0, bottom: 0, right: 0 }}>
@@ -84,4 +85,4 @@ const map = ({ apiKey }: MapProps) => {
   );
 };
 
-export default map;
+export default MapComponent;

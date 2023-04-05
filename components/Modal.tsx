@@ -2,6 +2,7 @@ import React from "react";
 import img1 from "../public/images/img1.jpg";
 import img2 from "../public/images/img4.png";
 import img3 from "../public/images/img5.png";
+import img4 from "../public/images/profile2.png";
 
 import Image from "next/image";
 const Modal = () => {
@@ -48,12 +49,21 @@ const Modal = () => {
                 <ul className="list-group list-group-light">
                   <li className="list-group-item d-flex justify-content-between align-items-center">
                     <div className="d-flex align-items-center">
-                      <img
+                      {/* <img
                         src="https://mdbootstrap.com/img/new/avatars/8.jpg"
                         alt=""
                         style={{ width: 50, height: 50 }}
                         className="rounded-circle"
-                      />
+                      /> */}
+                       <Image
+                      src={img4}
+                      alt="avatar"
+                      style={{borderRadius: "8px"}}
+                      width={50}
+                      height={50}
+                      className="rounded-circle"
+
+                    />
                       <div className="ms-3">
                         <h5 className=" mb-1">Muhammad Zeeshan</h5>
                         <p className="mb-0">Personal</p>

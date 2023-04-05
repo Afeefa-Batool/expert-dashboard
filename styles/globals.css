@@ -122,6 +122,49 @@ hr {
 .Learn-more:hover {
   color: #db0406;
 }
+/* ------------icon functionality start---------- */
+.icon-container {
+  position: relative;
+  display: inline-block;
+}
+
+.icon-container i {
+  font-size: 24px;
+  color: #333;
+  cursor: pointer;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: calc(100% + 5px);
+  left: -10px;
+  z-index: 1;
+  background-color: #fff;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.option i {
+  font-size: 16px;
+  margin-right: 10px;
+}
+
+.option:hover {
+  background-color: #f0f0f0;
+}
+
+
+
+
+/* ------------end---------------- */
 /* =======floating input feilds======== */
 .Beck-Hall {
   width: 482px;
@@ -456,11 +499,7 @@ hr {
   background-color: #f1f1f1;
 }
 
-.focus {
-  background: yellow;
-  color: #000;
-  border: 1px solid red;
-}
+
 /* ================================= */
 .search-wrapper {
   display: inline-block;

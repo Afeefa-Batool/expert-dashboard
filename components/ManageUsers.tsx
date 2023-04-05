@@ -1,5 +1,8 @@
 import React, { useState } from "react";
 import img1 from "../public/images/img7.png";
+import img2 from "../public/images/profile1.png";
+import img3 from "../public/images/profile2.png";
+
 import Image from "next/image";
 import { AiOutlineRight } from "react-icons/ai";
 import { BiBuildings } from "react-icons/bi";
@@ -9,31 +12,11 @@ import { FiSearch } from "react-icons/fi";
 import { AiOutlinePlus } from "react-icons/ai";
 import styles from "../styles/Manage-users.module.css";
 const ManageUsers = () => {
-  // const [showNewButton, setShowNewButton] = useState(false);
 
-  // const handleClick = () => {
-  //   setShowNewButton(!showNewButton);
-  // };
 
   return (
     <>
-      {/* <div>
-        {showNewButton ? (
-          <button
-            style={{ backgroundColor: "green", color: "white" }}
-            onClick={handleClick}
-          >
-            New Button
-          </button>
-        ) : (
-          <button
-            style={{ backgroundColor: "blue", color: "white" }}
-            onClick={handleClick}
-          >
-            Original Button
-          </button>
-        )}
-      </div> */}
+      
       <div className="container">
         <div className="row d-flex justify-content-between">
           <div className="col-md-3">
@@ -46,7 +29,7 @@ const ManageUsers = () => {
                 <div className="col-md-9">
                   <h4 className="manage-address">Manage Users</h4>
                   <p className="manage-address-detail">
-                  Don't worry, your information is private and we will not share this info with
+                  Don&apos;t worry, your information is private and we will not share this info with
 anyone outside Expert!
                   </p>
                   
@@ -146,10 +129,12 @@ anyone outside Expert!
               <div className="d-flex bd-highlight">
                 <div className="flex-grow-1 bd-highlight">
                   <div className="d-flex align-items-center">
-                    <img
-                      src="https://mdbootstrap.com/img/new/avatars/8.jpg"
-                      alt=""
-                      style={{ width: 60, height: 60, borderRadius: "8px" }}
+                    <Image
+                      src={img2}
+                      alt="avatar"
+                      style={{borderRadius: "8px"}}
+                      width={60}
+                      height={60}
                     />
                     <div className="ms-3">
                       <h5 className={styles.roles_name}>Muhammad Zeeshan</h5>
@@ -169,10 +154,13 @@ anyone outside Expert!
               <div className="d-flex bd-highlight">
                 <div className="flex-grow-1 bd-highlight">
                   <div className="d-flex align-items-center">
-                    <img
-                      src="https://mdbootstrap.com/img/new/avatars/8.jpg"
-                      alt=""
-                      style={{ width: 60, height: 60, borderRadius: "8px" }}
+           
+                     <Image
+                      src={img3}
+                      alt="avatar"
+                      style={{borderRadius: "8px"}}
+                      width={60}
+                      height={60}
                     />
                     <div className="ms-3">
                       <h5 className={styles.roles_name}>Ayesha Riaz</h5>
@@ -191,10 +179,13 @@ anyone outside Expert!
               <div className="d-flex bd-highlight">
                 <div className="flex-grow-1 bd-highlight">
                   <div className="d-flex align-items-center">
-                    <img
-                      src="https://mdbootstrap.com/img/new/avatars/8.jpg"
-                      alt=""
-                      style={{ width: 60, height: 60, borderRadius: "8px" }}
+        
+                      <Image
+                      src={img2}
+                      alt="avatar"
+                      style={{borderRadius: "8px"}}
+                      width={60}
+                      height={60}
                     />
                     <div className="ms-3">
                       <h5 className={styles.roles_name}>Ahsan Khan</h5>
@@ -214,10 +205,13 @@ anyone outside Expert!
               <div className="d-flex bd-highlight">
                 <div className="flex-grow-1 bd-highlight">
                   <div className="d-flex align-items-center">
-                    <img
-                      src="https://mdbootstrap.com/img/new/avatars/8.jpg"
-                      alt=""
-                      style={{ width: 60, height: 60, borderRadius: "8px" }}
+       
+                    <Image
+                      src={img3}
+                      alt="avatar"
+                      style={{borderRadius: "8px"}}
+                      width={60}
+                      height={60}
                     />
                     <div className="ms-3">
                       <h5 className={styles.roles_name}>Junaid Ahmad</h5>

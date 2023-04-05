@@ -1,8 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import Head from "next/head";
-import ContactInfo from "@/components/ContactInfo";
+import { useRouter } from "next/router";
+import Update from "../components/Update";
+const Update_address_page = (props: any) => {
+ 
 
-const Contact = () => {
+// =============================================================
+const router = useRouter();
+  const { state } = router.query;
+  // React.useEffect(() => {
+  //   console.log("testing:::", state);
+  // }, []);
+  React.useEffect(() => {
+    console.log("testing:::", state);
+  }, [state]);
+  const [address, setaddress] = useState(
+    typeof state === 'string' ? JSON.parse(state) : {}
+  );
+// ================================================================
+
   return (
     <>
       <Head>
@@ -33,9 +49,9 @@ const Contact = () => {
         /> */}
       </Head>
 
-      <ContactInfo />
+      {address.id && <Update addressProp={address} />}
     </>
   );
 };
 
-export default Contact;
+export default Update_address_page;
