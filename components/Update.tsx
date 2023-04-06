@@ -49,8 +49,10 @@ interface Address {
   state: string;
   addressNote: string;
 }
-
-const Update = ({ addressProp }: any) => {
+// interface UpdateProps {
+//   addressProp: string;
+// }
+const Update = ({ addressProp }:any) => {
   // ==================update code started=========================
 
   const [line1, setLine1] = useState("");
