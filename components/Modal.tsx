@@ -3,7 +3,7 @@ import img1 from "../public/images/img1.jpg";
 import img2 from "../public/images/img4.png";
 import img3 from "../public/images/img5.png";
 import img4 from "../public/images/profile2.png";
-
+import Link from "next/link";
 import Image from "next/image";
 const Modal = () => {
   return (
@@ -18,6 +18,8 @@ const Modal = () => {
         >
           Launch demo modal
         </button>
+
+        <Link href="/Manage-address-page">move to next page</Link>
         {/* Modal */}
         <div
           className="modal fade"
